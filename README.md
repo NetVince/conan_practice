@@ -25,7 +25,14 @@ Avant de pouvoir construire ce projet, assurez-vous d'avoir les outils suivants 
    cd conan-practice
    ```
 
-2. Installez les dépendances du projet avec Conan :
+2. Avant de commencer, il est nécessaire de créer le profil Conan
+
+   ```bash
+   conan profile detect
+   ```
+   Vérifiez que les settings sont bons. Par la suite, on pourra créer de nouveaux profils pour build en mode Debug par exemple. Par défaut, on est en mode Release
+
+3. Installez les dépendances du projet avec Conan :
 
    ```bash
    conan install . --output-folder=build --build=missing

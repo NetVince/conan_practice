@@ -12,7 +12,10 @@ class ConanTutorialRecipe(ConanFile):
     def requirements(self):
         self.requires("fmt/11.0.2")
         self.requires("lz4/1.10.0")
-        self.requires("hello/1.0")
+        self.requires("hello/[>=1.0]")
+    
+    def layout(self):
+        cmake_layout(self)
 
     def build(self):
         cmake = CMake(self)

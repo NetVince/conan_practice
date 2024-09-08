@@ -2,12 +2,12 @@ cmake_minimum_required(VERSION 3.15)
 project(conan_pratice)
 set(VERSION "1.0")
 
-include(${CMAKE_BINARY_DIR}/conan_toolchain.cmake)
+#include(${CMAKE_BINARY_DIR}/conan_toolchain.cmake)
 
 # On indique les paquets que CMake doit trouver (on peut préciser la version aussi, si besoin)
 find_package(fmt REQUIRED)
 find_package(lz4 REQUIRED)
-find_package(hello 1.0 REQUIRED)
+find_package(hello REQUIRED)
 
 message("Building with CMake version: ${CMAKE_VERSION}")
 
